@@ -1,0 +1,53 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+
+	margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+
+    /* NEW */
+    background-color: #ffffff !important;
+
+    color: rgb(0, 0, 0);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADERS */
+li::marker {
+    color: rgb(31, 46, 155);
+    border-radius: 2px;
+  }
+
+/* PAGE 1 */
+
+#heroPage{ 
+    color: aliceblue !important;
+    background-color: black !important;
+}
+/* .heroPage h3{
+    color: aliceblue !important;
+} */
+
+.jumbotron{
+    background-color: transparent;
+}
+
+.bg-dark{
+    color: aqua;
+    padding: 0.5em 0.5em;
+}
+
+/* FOOTERS */
+
+/* Rounded border */
+hr.rounded {
+    width: 90%;
+    border-top: 4px solid #513e3e;
+    border-radius: 100px;
+    padding-bottom: 1em;
+  }

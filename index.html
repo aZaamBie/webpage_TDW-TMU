@@ -10,6 +10,10 @@
         <meta name="author" content="Azaam Holdman">
 
 
+        <!-- Load my css -->
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+        <!-- href="../webpage_TDW-TMU/stylesheets/main.css" -->
+
         <!-- LOAD bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,12 +30,18 @@
         </div> -->
 
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" role="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top py-3" role="navigation">
             <!-- <h2>Tadiwa Taimu</h2>  -->
-            <a class="navbar-brand" href="index.html">Tadiwa Taimu</a>
+            <ul>
+                <li>
+                    <a class="navbar-brand" href="index.html">Tadiwa Taimu</a>
+                </li>
+            </ul>
+            <!-- <a class="navbar-brand" href="index.html">Tadiwa Taimu</a> -->
 
             <div class="container-fluid justify-content-center">
                 <!-- <h2>Tadiwa Taimu</h2> -->
+                <!-- Button: toggle navbar -->
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                     aria-controls="bs-example-navbar-collapse-1" aria-expanded="true" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span> 
@@ -46,7 +56,93 @@
                 </div>
 
             </div>
-    </nav>
+        </nav>
+
+        <!-- BODY -->
+
+        <!-- HOME / HERO PAGE -->
+        <div class="jumbotron-fluid text-center px-5 py-5" id="heroPage">
+
+            <div class="row">
+
+                <div class="col-sm-6 px-1">
+                    <h2>Welcome to My World of Construction </h2>
+                </div>
+
+                <div class="col-sm-5 px-1">
+                    <p class="lead">With a focus on sustainable practices and a desire to make a difference, I am excited to begin my journey as a future professional. As a junior student, I have gained invaluable experience and skills in various areas, including project management, research, and leadership. My work portfolio highlights the projects I have been a part of and the results I have achieved. I am confident that my passion, dedication, and skills will make me a valuable addition to any team.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+
+            <!-- HOME / HERO PAGE -->
+            <!-- <div class="jumbotron text-center" id="heroPage">
+                <div class="row">
+
+                    <div class="col-sm-6 px-1">
+                        <h3>Welcome to My World of Construction </h3>
+                    </div>
+
+                    <div class="col-sm-6 px-1">
+                        <p class="lead">With a focus on sustainable practices and a desire to make a difference, I am excited to begin my journey as a future professional. As a junior student, I have gained invaluable experience and skills in various areas, including project management, research, and leadership. My work portfolio highlights the projects I have been a part of and the results I have achieved. I am confident that my passion, dedication, and skills will make me a valuable addition to any team.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Practical portfolio -->
+            <div class="jumbotron-fluid text-center py-5" id="practicalPortfolio">
+                <h1>PRACTICAL PORTFOLIO</h1>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-6 px-5">
+                        <div class="thumnbnail">
+                            <img class="img-fluid rounded-circle" src="https://static.wixstatic.com/media/1a5fde_b8d16a8372e649e2932ebe75dd2958a7~mv2.jpeg/v1/crop/x_0,y_107,w_1391,h_1391/fill/w_600,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_9432.jpeg"
+                                alt="Tadiwa Taimu portrait"
+                                style="width: 70%;">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 px-5 py-5">
+                        <p>Tadiwa Taimu is an aspiring construction professional with experience in the built environment industry in Botswana and South Africa. With a background in quantity surveying and construction management, Tadiwa has worked on numerous projects of varying sizes and complexity. This website provides a practical overview and display of Tadiwa Taimu's experience, including a daily and weekly log of projects during  her work experience.Her Reflection and what she learnt from the projects and people  she worked with.</p>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- view stuff -->
+                <div class="row py-5">
+                    <div class="col-sm-4 px-1">
+                        <button class="px-1 mt-3 mb-3 bg-dark">View Resume</button>
+                    </div>
+
+                    <div class="col-sm-4 px-1">
+                        <button class="px-1 mt-3 mb-3 bg-dark">View Projects</button>
+                    </div>
+
+                    <div class="col-sm-4 px-1">
+                        <button class="px-1 mt-3 mb-3 bg-dark" >Contact Tadiwa</button>
+                        <!-- <button class="px-1 mt-3 mb-3" data-toggle="collapse" data-target="#EP_learnMore">Learn more</button> -->
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <hr class="rounded">
+
+        <footer>
+            <p>Phone</p>
+        </footer>
+
     </body>
 
 </html>
