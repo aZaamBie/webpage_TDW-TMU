@@ -23,6 +23,39 @@ li::marker {
     border-radius: 2px;
   }
 
+
+/* NAV */
+
+/* Navbrand text */
+.navbar-brand:link{
+    font-size: x-large !important;
+    transform: scale(1.0,1.0); 
+    transition: transform 0.5s;
+}
+.navbar-brand:hover {
+    transform: scale(1.05,1.05);
+}
+
+/* a for nav links || :active NOT WORKING*/
+.nav-link:link{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    transform: scale(1.0,1.0); 
+}
+.nav-link:active{
+    transform: scale(1.05,1.05) !important; 
+}
+
+
+/* li for nav links || :active NOT WORKING*/
+.nav-item:link{
+    transform: scale(1.0,1.0); 
+}
+.nav-item:active{
+    transform: scale(1.05,1.05) !important; 
+}
+
+
 /* PAGE 1 */
 
 #heroPage{ 
@@ -51,3 +84,14 @@ hr.rounded {
     border-radius: 100px;
     padding-bottom: 1em;
   }
+
+
+/* List stuff */
+.noBullet{
+    list-style-type: none;
+
+}
+
+li{
+    font-size: medium;
+}
