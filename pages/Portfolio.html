@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <!-- 
-         27/8: 1hr --- started projects page
+         31/8: 1hr --- started portfolio page
           -->
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-        <title>Tadiwa Taimu - Projects</title>
+        <title>Tadiwa Taimu - Portfolio</title>
     </head>
     <body>
         <!-- HEADERs SECTION -->
@@ -40,7 +40,7 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="Resume.html">Resume</a> </li>
-                        <li class="nav-item active"> <a class="nav-link" href="#">Projects</a> </li>
+                        <li class="nav-item active"> <a class="nav-link" href="Projects.html">Projects</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="Pages/Contact.html">Contact</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="Portfolio.html">Portfolio</a> </li>
                     </ul>
@@ -52,56 +52,91 @@
     <!-- BODY -->
     <div class="container text-center">
         <!-- TITLE -->
-        <h1 class="display-4 py-5">Projects</h1>
+        <h1 class="display-4 py-4">My Portfolio</h1>
 
-        <div class="jumbotron">
-            <h2 class="py-1 mb-4">Practical Experience Portfolio</h2>
-            
-            <!-- BLOCK 1 -->
-            <div class="row py-5">
-                <div class="col">
-                    <h3 style="text-align: left;" class="font-weight-normal" >Construction Project Management Rubik</h3>
-                    <br>
-                    <p style="text-align: left;">This project involved managing and overseeing the construction of a commercial building in Botswana. 
-                        My responsibilities included budgeting, scheduling, and ensuring quality control.</p>
+        <p class="lead py-3">Welcome to my portfolio. Here you'll find a selection of my work. Explore my projects to learn more about what I do</p>
+
+        <div class="jumbotron text-center" style="width: 100%;">
+
+            <div class="row py-3">
+                <div class="col-sm-4">
+                    <!-- <a class="tabLink" onclick="openProject(event, '1')">
+                        <img class="img-thumbnail">
+                        <p>Project 1</p>
+                    </a> -->
+
+                    <a class="tabLink" onclick="openProject(event, '1')" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        <img class="img-thumbnail">
+                        <p>Project 1</p>
+                    </a>
                 </div>
 
-                <div class="col">
-                    <img class="img-thumbnail" src="https://static.wixstatic.com/media/c837a6_871a4251d9874b0d8acfe66796caaaf8~mv2.jpg/v1/fill/w_614,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/brendan-church-9F3sEV1-Iog-unsplash.jpg">
+                <div class="col-sm-4">
+                    <img class="img-thumbnail">
+                    <p>Project 2</p>
                 </div>
+
+                <div class="col-sm-4">
+                    <img class="img-thumbnail">
+                    <p>Project 3</p>
+                </div>
+
             </div>
-
-            <!-- BLOCK 2 -->
-            <div class="row py-5">
-                <div class="col">
-                    <h3 style="text-align: left;" class="font-weight-normal"> Quantity Surveying Tlokweng </h3>
-                    <br>
-                    <p style="text-align: left;">I was responsible for estimating material, labor, and equipment costs for the construction of a residential building in South Africa. This involved analyzing blueprints, conducting site visits, and collaborating with architects and engineers.</p>
-                </div>
-
-                <div class="col">
-                    <img class="img-thumbnail" src="https://static.wixstatic.com/media/11062b_6ddd2b6a939949a0acd0df3847b896bc~mv2.jpg/v1/fill/w_613,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Fashion%20Magazine.jpg">
-                </div>
-            </div>
-
-            <!-- BLOCK 3 -->
-            <div class="row py-5">
-                <div class="col">
-                    <h3 style="text-align: left;" class="font-weight-normal"> Renovation Project Watermarque </h3>
-                    <br>
-                    <p style="text-align: left;">As project manager, I oversaw the renovation of an existing building in Botswana. This involved coordinating with contractors, obtaining necessary permits, and ensuring compliance with safety regulations.</p>
-                </div>
-
-                <div class="col">
-                    <img class="img-thumbnail" src="https://static.wixstatic.com/media/8121cd0609b8412497001bae77b1af31.jpg/v1/fill/w_613,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/8121cd0609b8412497001bae77b1af31.jpg">
-                </div>
-            </div>
-
-
 
         </div>
+    </div>
 
 
+    <div class="modal" id="myModal">
+        <div class="modal-dialog-centered">
+
+            <div class="modal-content">
+
+                 <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Tadiwa Taimu Portfolio</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!-- Modal body.. -->
+                    <!-- <img class="img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                    style="width: 50%;"> -->
+
+                    <div class="row py-3">
+
+                        <div class="col-3">
+                            <p><strong>Project Type</strong></p>
+                            <p>Work Portfolio</p>
+                        </div>
+
+                        <div class="col-3">
+                            <p><strong>Date</strong></p>
+                            <p>september 2023</p>
+                        </div>
+
+                        <div class="col-3">
+                            <p><strong>Location</strong></p>
+                            <p>Cape Town</p>
+                        </div>
+
+                    </div>
+
+                    <img class="img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                    style="width: 50%;">
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
 
