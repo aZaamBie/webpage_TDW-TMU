@@ -81,8 +81,53 @@ li::marker {
 }
 
 
+/* PORTFOLIO PAGE */
+#projectsSection{
+    transition: 0.3s;
+    background-color: #513e3e !important;
+}
+
+#projectsSection a:link{
+    transform: scale(1.0,1.0);
+}
+
+#projectsSection a:hover{
+    transform: scale(1.05,1.05);
+}
+
+.modal {
+    width: 50% !important;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
 
 
+.modal-content{
+    margin: auto;
+    padding: 20px;
+    width: 50% !important;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
 
 
 /* FOOTERS */

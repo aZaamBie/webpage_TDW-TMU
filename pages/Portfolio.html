@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <!-- 
-         31/8: 1hr --- started portfolio page
+         31/8: 1-2 hr --- started portfolio page
+         01/9: 1-2 hr   --- testing javascript, changing modal content
           -->
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <meta charset="UTF-8">
@@ -58,22 +59,26 @@
 
         <div class="jumbotron text-center" style="width: 100%;">
 
-            <div class="row py-3">
+            <div class="row py-3" id="projectsSection">
                 <div class="col-sm-4">
                     <!-- <a class="tabLink" onclick="openProject(event, '1')">
                         <img class="img-thumbnail">
                         <p>Project 1</p>
                     </a> -->
 
-                    <a class="tabLink" onclick="openProject(event, '1')" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                    onclick="openProject(1, 'Work Portfolio', 'September 2023', 'Cape Town' )">
                         <img class="img-thumbnail">
                         <p>Project 1</p>
                     </a>
                 </div>
 
                 <div class="col-sm-4">
-                    <img class="img-thumbnail">
-                    <p>Project 2</p>
+                    <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                    onclick="openProject(2, 'Photography', 'April 2023', '' )">
+                        <img class="img-thumbnail">
+                        <p>Project 2</p>
+                    </a>
                 </div>
 
                 <div class="col-sm-4">
@@ -100,31 +105,45 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <!-- Modal body.. -->
-                    <!-- <img class="img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-                    style="width: 50%;"> -->
 
-                    <div class="row py-3">
+                    <div class="container">
+                        <div class="row py-3">
 
-                        <div class="col-3">
-                            <p><strong>Project Type</strong></p>
-                            <p>Work Portfolio</p>
+                            <div class="col-3">
+                                <p><strong>Project Type</strong></p>
+                                <p id="pTitle">Title</p>
+                            </div>
+
+                            <div class="col-3">
+                                <p><strong>Date</strong></p>
+                                <p id="pDate">Date</p>
+                            </div>
+
+                            <div class="col-3" id="location">
+                                <p><strong>Location</strong></p>
+                                <p id="pLoc">Location</p>
+                            </div>
+
                         </div>
 
-                        <div class="col-3">
-                            <p><strong>Date</strong></p>
-                            <p>september 2023</p>
-                        </div>
+                        <!-- <img class="img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                        style="width: 50%;"
+                        id="img1"> -->
 
-                        <div class="col-3">
-                            <p><strong>Location</strong></p>
-                            <p>Cape Town</p>
+                        <!-- second row, with image and description -->
+                        <div class="row py-3">
+                            <div class="col-sm-8">
+                                <img class="img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                                style="width: 90%;"
+                                id="img1">
+                            </div>
+                            <div class="col-sm-4">
+                                <p id="description">Lorum Ipsum ditsum</p>
+                            </div>
                         </div>
 
                     </div>
 
-                    <img class="img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-                    style="width: 50%;">
 
 
                 </div>
@@ -138,6 +157,54 @@
 
         </div>
     </div>
+
+    <script>
+        function openProject(evt, name, date, location, content){
+            // Declare all variables
+            // var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            // tabcontent = document.getElementsByClassName("tabLink");
+            // for (i = 0; i < tabcontent.length; i++) {
+            //     tabcontent[i].style.display = "none";
+            // }
+
+            // // Get all elements with class="tablinks" and remove the class "active"
+            // tablinks = document.getElementsByClassName("tablinks");
+            // for (i = 0; i < tablinks.length; i++) {
+            //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+            // }
+
+            // // Show the current tab, and add an "active" class to the button that opened the tab
+            // document.getElementById(cityName).style.display = "block";
+            // evt.currentTarget.className += " active";
+
+
+            // modal
+            document.getElementById("pTitle").innerHTML = name;
+            document.getElementById("pDate").innerHTML = date;
+            document.getElementById("pLoc").innerHTML = location;
+
+            var loc_ = document.getElementById("location");
+            var descrip_ = document.getElementById("description");
+
+            if (location=='') {
+                loc.style.display = "none";
+            }
+            else{
+                loc.style.display = "block";
+            }
+
+            if(evt==1){
+                descrip_.innerHTML = "This my Practical experience in Construction.";
+            }
+            else if (evt==2) {
+                descrip_.innerHTML = "This is where the project description goes. Give an overview or go in depth - what it's all about, what inspired you, how you created it, or anything else you'd like visitors to know. To add Project descriptions, go to Manage Projects.";
+            } else {
+                descrip_.innerHTML = "Nothing here (yet)";
+            }
+        }
+    </script>
 
 
     <!-- FOOTER -->
