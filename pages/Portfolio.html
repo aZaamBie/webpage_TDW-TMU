@@ -82,8 +82,11 @@
                 </div>
 
                 <div class="col-sm-4">
-                    <img class="img-thumbnail">
-                    <p>Project 3</p>
+                    <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                    onclick="openProject(3, 'Photography', 'April 2023', '' )">
+                        <img class="img-thumbnail">
+                        <p>Project 3</p>
+                    </a>
                 </div>
 
             </div>
@@ -185,15 +188,16 @@
             document.getElementById("pDate").innerHTML = date;
             document.getElementById("pLoc").innerHTML = location;
 
-            var loc_ = document.getElementById("location");
+            const loc_ = document.getElementById("location");
             var descrip_ = document.getElementById("description");
 
-            if (location=='') {
-                loc.style.display = "none";
-            }
-            else{
-                loc.style.display = "block";
-            }
+            // if (location=='') {
+            //     loc.style.display = "none";
+            // } else{
+            //     loc.style.display = "block";
+            // }
+            // checkLoc(location);
+
 
             if(evt==1){
                 descrip_.innerHTML = "This my Practical experience in Construction.";
@@ -204,6 +208,20 @@
                 descrip_.innerHTML = "Nothing here (yet)";
             }
         }
+
+        // function checkLoc(loc_){
+        //     const loc_ = document.getElementById("location");
+        //     if (loc==''){
+        //         loc.style.display = "none";
+        //         // loc.remove();
+        //     }
+        //     else{
+        //         loc.innerHTML = loc_
+        //         loc.style.display = "block";
+        //     }
+        // }
+        
+        
     </script>
 
 
