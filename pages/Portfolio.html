@@ -4,6 +4,7 @@
         <!-- 
          31/8: 1-2 hr --- started portfolio page
          01/9: 1-2 hr   --- testing javascript, changing modal content
+         02/9: 1 hr   --- bug fixing JS
           -->
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <meta charset="UTF-8">
@@ -41,9 +42,9 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="Resume.html">Resume</a> </li>
-                        <li class="nav-item active"> <a class="nav-link" href="Projects.html">Projects</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="Projects.html">Projects</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="Pages/Contact.html">Contact</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="Portfolio.html">Portfolio</a> </li>
+                        <li class="nav-item active"> <a class="nav-link" href="Portfolio.html">Portfolio</a> </li>
                     </ul>
                 </div>
 
@@ -59,35 +60,63 @@
 
         <div class="jumbotron text-center" style="width: 100%;">
 
-            <div class="row py-3" id="projectsSection">
-                <div class="col-sm-4">
-                    <!-- <a class="tabLink" onclick="openProject(event, '1')">
-                        <img class="img-thumbnail">
-                        <p>Project 1</p>
-                    </a> -->
-
+            <div class="row py-2" id="projectsSection">
+                <div class="col-sm-4 py-4">
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
                     onclick="openProject(1, 'Work Portfolio', 'September 2023', 'Cape Town' )">
-                        <img class="img-thumbnail">
+                        <img class="img-thumbnail" style="width: 100%;"
+                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
                         <p>Project 1</p>
                     </a>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-4 py-4">
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
-                    onclick="openProject(2, 'Photography', 'April 2023', '' )">
-                        <img class="img-thumbnail">
+                    onclick="openProject(2, 'Photography', 'April 2023', '_' )">
+                        <img class="img-thumbnail" style="width: 100%;"
+                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
                         <p>Project 2</p>
                     </a>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-4 py-4">
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
-                    onclick="openProject(3, 'Photography', 'April 2023', '' )">
-                        <img class="img-thumbnail">
+                    onclick="openProject(3, 'Photography', 'April 2023', '_' )">
+                        <img class="img-thumbnail" style="width: 100%;"
+                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
                         <p>Project 3</p>
                     </a>
                 </div>
+
+                <!-- ROW 2 -->
+
+                <div class="col-sm-4 py-4">
+                    <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                    onclick="openProject(3, 'Photography', 'April 2023', '_' )">
+                        <img class="img-thumbnail" style="width: 100%;"
+                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
+                        <p>Project 4</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-4 py-4">
+                    <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                    onclick="openProject(3, 'Photography', 'April 2023', '_' )">
+                        <img class="img-thumbnail" style="width: 100%;"
+                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
+                        <p>Project 5</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-4 py-4">
+                    <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                    onclick="openProject(3, 'Photography', 'April 2023', '_' )">
+                        <img class="img-thumbnail" style="width: 100%;"
+                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
+                        <p>Project 6</p>
+                    </a>
+                </div>
+
 
             </div>
 
@@ -162,6 +191,8 @@
     </div>
 
     <script>
+        const loc_ = document.getElementById("location");
+
         function openProject(evt, name, date, location, content){
             // Declare all variables
             // var i, tabcontent, tablinks;
@@ -182,22 +213,12 @@
             // document.getElementById(cityName).style.display = "block";
             // evt.currentTarget.className += " active";
 
-
-            // modal
+            // modal \\
             document.getElementById("pTitle").innerHTML = name;
             document.getElementById("pDate").innerHTML = date;
             document.getElementById("pLoc").innerHTML = location;
 
-            const loc_ = document.getElementById("location");
             var descrip_ = document.getElementById("description");
-
-            // if (location=='') {
-            //     loc.style.display = "none";
-            // } else{
-            //     loc.style.display = "block";
-            // }
-            // checkLoc(location);
-
 
             if(evt==1){
                 descrip_.innerHTML = "This my Practical experience in Construction.";
@@ -207,19 +228,14 @@
             } else {
                 descrip_.innerHTML = "Nothing here (yet)";
             }
+
+            checkLoc(location);
         }
 
-        // function checkLoc(loc_){
-        //     const loc_ = document.getElementById("location");
-        //     if (loc==''){
-        //         loc.style.display = "none";
-        //         // loc.remove();
-        //     }
-        //     else{
-        //         loc.innerHTML = loc_
-        //         loc.style.display = "block";
-        //     }
-        // }
+        function checkLoc(_loc){ // no bugs anymore
+            if (_loc=="_"){ loc_.style.display = "none"; } // if NO content, then hide the location segment
+            else{ loc_.style.display = "block"; } // if has content, then show the location segment
+        }
         
         
     </script>
