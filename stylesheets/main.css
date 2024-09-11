@@ -125,7 +125,15 @@ li::marker {
     to {opacity: 1;}
   }
 
-
+/* CONTACTS */
+.iconZoom:link{
+    transform: scale(1.0,1.0)  !important; 
+    transition: transform 0.5s  !important; 
+}
+.iconZoom:hover {
+    transform: scale(1.05,1.05)  !important;
+ }
+  
 /* FOOTERS */
 
 /* Rounded border */
@@ -134,8 +142,7 @@ hr.rounded {
     border-top: 4px solid #513e3e;
     border-radius: 100px;
     padding-bottom: 1em;
-  }
-
+}
 
 /* List stuff */
 .noBullet{
