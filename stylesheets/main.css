@@ -119,6 +119,15 @@ li::marker {
     margin: auto;
     padding: 20px;
     width: 70% !important;
+    /* Width originally kept at 70%*/
+}
+
+@media only screen and (max-width: 600px){
+    .modal-content{
+        margin: auto;
+        padding: 20px;
+        width: 95% !important;
+    }
 }
 
 /* Fade in tabs */
