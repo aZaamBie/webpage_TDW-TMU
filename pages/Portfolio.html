@@ -70,7 +70,8 @@
         <div class="jumbotron text-center" style="width: 100%;">
 
             <div class="row py-2" id="projectsSection">
-                <div class="col-sm-4 py-4">
+                <div class="col-6 py-4">
+                <!-- <div class="col-sm-4 py-4"> -->
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
                     onclick="openProject(1, 'MDA Project', '2023 - 2024', 'Cape Town' )"> 
                     <!-- onclick="openProject(1, 'Work Portfolio', 'September 2023', 'Cape Town' )"> -->
@@ -80,7 +81,8 @@
                     </a>
                 </div>
 
-                <div class="col-sm-4 py-4">
+                <!-- <div class="col-sm-4 py-4">-->
+                <div class="col-6 py-4">
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
                     onclick="openProject(2, 'Watermarque Consulting', 'Nov 2022 - Jan 2023', '_' )">
                         <img class="img-thumbnail" style="width: 17em;"
@@ -89,27 +91,36 @@
                     </a>
                 </div>
 
-                <div class="col-sm-4 py-4">
+                <!-- <div class="col-sm-4 py-4">
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
-                    onclick="openProject(3, 'Photography', 'April 2023', '_' )">
+                    onclick="openProject(3, 'Abland Property Developers', 'Jun 2022 - Jul 2022', 'Cape Town' )">
                         <img class="img-thumbnail" style="width: 17em;"
-                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                        <p>Project 3</p>
+                        src="../assets/images/Ablands_Projects/20220628_152942.jpg">
+                        <p>Abland Property Developers</p>
                     </a>
-                </div>
+                </div> -->
 
                 <!-- ROW 2 -->
 
-                <div class="col-sm-4 py-4">
+                <div class="col-6 py-4">
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
-                    onclick="openProject(4, 'Photography', 'April 2023', '_' )">
+                    onclick="openProject(3, 'Abland Property Developers', 'Jun 2022 - Jul 2022', 'Cape Town' )">
                         <img class="img-thumbnail" style="width: 17em;"
-                        src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                        <p>Project 4</p>
+                        src="../assets/images/Ablands_Projects/20220628_152942.jpg">
+                        <p>Abland Property Developers</p>
                     </a>
                 </div>
 
-                <div class="col-sm-4 py-4">
+                <div class="col-6 py-4">
+                    <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                    onclick="openProject(4, 'China JiangSu', '2020 - 2021', '_' )">
+                        <img class="img-thumbnail" style="width: 17em;"
+                        src="../assets/images/ChinaJiangsu_Projects/353451185_735661278569312_1068282675872604363_n.jpg">
+                        <p>China JiangSu</p>
+                    </a>
+                </div>
+
+                <!-- <div class="col-sm-4 py-4">
                     <a class="tabLink" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
                     onclick="openProject(5, 'Photography', 'April 2023', '_' )">
                         <img class="img-thumbnail" style="width: 17em;"
@@ -125,7 +136,7 @@
                         src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
                         <p>Project 6</p>
                     </a>
-                </div>
+                </div> -->
 
 
             </div>
@@ -141,7 +152,7 @@
 
                  <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Tadiwa Taimu Portfolio</h4>
+                    <h4 class="modal-title" id="projectTitle">Tadiwa Taimu Portfolio</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -151,10 +162,10 @@
                     <div class="container">
                         <div class="row py-3">
 
-                            <div class="col-sm-3">
+                            <!-- <div class="col-sm-3">
                                 <p><strong>Project Type</strong></p>
                                 <p id="pTitle">Title</p>
-                            </div>
+                            </div> -->
 
                             <div class="col-sm-3">
                                 <p><strong>Date</strong></p>
@@ -182,15 +193,15 @@
 
                         <!-- thir drow, many smaller images -->
                         <div class="row py-3">
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 py-4">
                                 <img class="miniIMG img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" 
                                 style="width: 15em;" id="miniIMG1">
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 py-4">
                                 <img class="miniIMG img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" 
                                 style="width: 15em;" id="miniIMG2">
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 py-4">
                                 <img class="miniIMG img-responsive" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" 
                                 style="width: 15em;" id="miniIMG3">
                             </div>
@@ -275,23 +286,18 @@
             // evt.currentTarget.className += " active";
 
             // modal \\
-            document.getElementById("pTitle").innerHTML = name;
+            document.getElementById("projectTitle").innerHTML = name;
+            // document.getElementById("pTitle").innerHTML = name;
             document.getElementById("pDate").innerHTML = date;
             document.getElementById("pLoc").innerHTML = location;
 
             var descrip_ = document.getElementById("description");
 
-            if(evt==1){
-                descrip_.innerHTML = "This my Practical experience in Construction.";
-            }
-            else if (evt==2) {
-                descrip_.innerHTML = "This is where the project description goes. Give an overview or go in depth - what it's all about, what inspired you, how you created it, or anything else you'd like visitors to know. To add Project descriptions, go to Manage Projects.";
-            } else {
-                descrip_.innerHTML = "Nothing here (yet)";
-            }
-
-            // image handle
+            // images + description handle
             if(evt==1){ // MDA PROJECTS
+                // document.getElementById("projectTitle").innerHTML = "MDA Projects"
+                descrip_.innerHTML = "This is my Practical experience in Construction, more specifically, the Construction industry in Botswana and South Africa";
+
                 document.getElementById("img1").src = "../assets/images/MDA_Projects/IMG_20231213_092927.jpg";
                 document.getElementById("miniIMG1").src ="../assets/images/MDA_Projects/IMG_20231213_092927.jpg";
                 document.getElementById("miniIMG2").src ="../assets/images/MDA_Projects/IMG_20231213_092935.jpg";
@@ -308,6 +314,9 @@
             }
 
             else if(evt==2){ // Watermarque
+                // document.getElementById("projectTitle").innerHTML = "Watermarque Consulting"
+                descrip_.innerHTML = "My experience as a consultant quantity surveying intern.";
+
                 document.getElementById("img1").src = "../assets/images/Watermarque_Projects/20221129_160552.jpg";
                 document.getElementById("miniIMG1").src = "../assets/images/Watermarque_Projects/IMG_20221207_095726_226.jpg";
                 document.getElementById("miniIMG2").src = "../assets/images/Watermarque_Projects/IMG-20221129-WA0008.jpg";
@@ -321,9 +330,42 @@
                 document.getElementById("miniIMG10").src = "../assets/images/Watermarque_Projects/IMG-20221213-WA0001.jpg";
                 document.getElementById("miniIMG11").src = "../assets/images/Watermarque_Projects/20221129_160618.jpg";
                 document.getElementById("miniIMG12").src = "../assets/images/Watermarque_Projects/20221129_160632.jpg";
+            }
 
-                // 
-                // 
+            else if(evt==3){ // Abland property developpers
+                descrip_.innerHTML = "My first-hand experience as a Site-based Construction Management intern)";
+
+                document.getElementById("img1").src = "../assets/images/Ablands_Projects/20220624_131117.jpg";
+                document.getElementById("miniIMG1").src = "../assets/images/Ablands_Projects/20220624_131117.jpg";
+                document.getElementById("miniIMG2").src = "../assets/images/Ablands_Projects/20220624_132013.jpg";
+                document.getElementById("miniIMG3").src = "../assets/images/Ablands_Projects/20220628_152940.jpg";
+                document.getElementById("miniIMG4").src = "../assets/images/Ablands_Projects/20220628_152942.jpg";
+                document.getElementById("miniIMG5").src = "../assets/images/Ablands_Projects/20220628_152945.jpg";
+                document.getElementById("miniIMG6").src = "../assets/images/Ablands_Projects/20220628_152947.jpg";
+                document.getElementById("miniIMG7").src = "../assets/images/Ablands_Projects/20220630_104905.jpg";
+                document.getElementById("miniIMG8").src = "../assets/images/Ablands_Projects/20220630_104915.jpg";
+                document.getElementById("miniIMG9").src = "../assets/images/Ablands_Projects/20220630_105251.jpg";
+                document.getElementById("miniIMG10").src = "../assets/images/Ablands_Projects/20230420_144447.jpg";
+                document.getElementById("miniIMG11").src = "../assets/images/Ablands_Projects/IMG-20230425-WA0009.jpg";
+                document.getElementById("miniIMG12").src = "";
+            }
+
+            else if(evt==4){ // ChinaJiangSu                
+                descrip_.innerHTML = "My experience as a Contractor Quanity Surveyor, as well as the Client surveyor";
+
+                document.getElementById("img1").src = "../assets/images/ChinaJiangsu_Projects/353451185_735661278569312_1068282675872604363_n.jpg";
+                document.getElementById("miniIMG1").src = "../assets/images/ChinaJiangsu_Projects/353451062_735661208569319_1953710631875055788_n.jpg";
+                document.getElementById("miniIMG2").src = "../assets/images/ChinaJiangsu_Projects/353412006_735661211902652_2250840995684991934_n.jpg";
+                document.getElementById("miniIMG3").src = "../assets/images/ChinaJiangsu_Projects/345913676_3262531594046053_2614961636719483249_n.jpg";
+                document.getElementById("miniIMG4").src = "../assets/images/ChinaJiangsu_Projects/345616349_189861730633976_1156054233544496215_n.jpg";
+                document.getElementById("miniIMG5").src = "../assets/images/ChinaJiangsu_Projects/345474588_797767741765324_2352286554223645396_n.jpg";
+                document.getElementById("miniIMG6").src = "../assets/images/ChinaJiangsu_Projects/158671805_3867573993324182_1432331976641797247_n.jpg";
+                document.getElementById("miniIMG7").src = "../assets/images/ChinaJiangsu_Projects/158657689_3867574089990839_2613765395728079630_n.jpg";
+                document.getElementById("miniIMG8").src = "../assets/images/ChinaJiangsu_Projects/158476734_3867574049990843_4355160954596552544_n.jpg";
+                document.getElementById("miniIMG9").src = "../assets/images/ChinaJiangsu_Projects/158476734_3867574049990843_4355160954596552544_n.jpg";
+                document.getElementById("miniIMG10").src = "../assets/images/ChinaJiangsu_Projects/158348313_3867573773324204_3057560263506388386_n.jpg";
+                document.getElementById("miniIMG11").src = "../assets/images/ChinaJiangsu_Projects/158286236_3867574033324178_1306456829868227573_n.jpg";
+                document.getElementById("miniIMG12").src = "../assets/images/ChinaJiangsu_Projects/157166385_3857593420988906_668050876283864043_n.jpg";
             }
 
             checkLoc(location);
